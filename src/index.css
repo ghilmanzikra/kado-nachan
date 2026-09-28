@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --color-primary: #f472b6;
+  --color-dark: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* CUSTOM CURSOR GENSHIN IMPACT */
+* {
+  cursor: url('/kursor_genshin.png'), auto !important;
+}
+
+.petal {
+  position: fixed;
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  border-radius: 15px 0 15px 0;
+  opacity: 0.8;
+  z-index: 50;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(200px) rotate(360deg);
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
