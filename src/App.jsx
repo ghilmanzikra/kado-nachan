@@ -369,7 +369,7 @@ const InteractiveLetter = ({ isUnlocked }) => {
         </p>
       </div>
 
-      <div className="relative w-full max-w-2xl flex justify-center mt-10" style={{ height: isOpen ? '850px' : '300px', transition: 'height 1s ease' }}>
+      <div className={`relative w-full max-w-2xl flex justify-center mt-10 transition-[height] duration-1000 ease-in-out ${isOpen ? 'h-[1150px] sm:h-[950px]' : 'h-[300px]'}`}>
 
         {/* AMPLOP TERTUTUP */}
         <div
